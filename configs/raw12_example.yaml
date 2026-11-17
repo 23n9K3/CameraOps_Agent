@@ -1,0 +1,8 @@
+width: 320
+height: 192
+bit_depth: 12
+storage_format: unpacked16
+endianness: little
+bayer_pattern: RGGB
+black_level: 64
+white_level: 4095

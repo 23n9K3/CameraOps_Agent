@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-computational-photography-lab"
+version = "0.1.0"
+description = "Offline computational photography and camera analysis"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26,<3",
+    "opencv-python-headless>=4.10,<5",
+    "pydantic>=2.8,<3",
+    "PyYAML>=6,<7",
+    "rawpy>=0.24,<1",
+    "streamlit>=1.65,<2",
+    "plotly>=6,<7",
+    "langgraph>=1,<2",
+    "scikit-image>=0.24,<1",
+    "tifffile>=2022.8.12",
+    "optuna>=4,<5",
+    "matplotlib>=3.9,<4",
+]
+
+[project.scripts]
+aicpl-raw = "src.camera.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["src", "src.*"]
+namespaces = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

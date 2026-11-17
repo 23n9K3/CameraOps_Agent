@@ -1,0 +1,27 @@
+seed: 20261116
+motion_samples: 16
+scene:
+  width: 320
+  height: 192
+  velocity_px_s: 540
+sensor:
+  bit_depth: 12
+  bayer_pattern: RGGB
+  black_level: 64
+  full_well_e: 12000
+  photon_rate_e_s: 300000
+  shot_noise: true
+  read_noise_e: 3.5
+  hot_pixel_fraction: 0.001
+  dead_pixel_fraction: 0.001
+  hot_pixel_rate_e_s: 220000
+  dsnu_e_s: 45
+  prnu_fraction: 0.014
+  row_noise_e: 1.4
+  column_noise_e: 0.8
+capture_plan:
+  capture_mode: bracket
+  exposure_times: [0.004, 0.010, 0.025, 0.045]
+  gains: [4.0, 2.0, 1.0, 1.0]
+  inter_frame_gap_s: 0.015
+  reference_frame: 0
